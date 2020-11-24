@@ -1,0 +1,30 @@
+*{
+    font-family: "Arial";
+}
+#clavier td {
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    color: #F9F9F9;
+    border: 1px solid #DDDDDD;
+    background-color: #5babf1;
+}
+
+#clavier {
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin: auto;
+    padding: 10px;
+}
+
+body{
+    text-align: center;
+}
+
+#clavier .invisible {
+    border: none;
+    cursor: auto;
+    background-color: #fff;
+}
