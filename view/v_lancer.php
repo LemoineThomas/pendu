@@ -1,1 +1,9 @@
-<a href="index.php?partie=nouvelle">Lancer une nouvelle partie</a>
+<?php
+    include('view/header.php');
+?>
+
+<button onclick="initPendu()">Lancer une nouvelle partie</button>
+
+<?php
+    include('view/footer.php');
+?>

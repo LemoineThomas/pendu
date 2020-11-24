@@ -2,16 +2,21 @@
     include('view/header.php');
 ?>
 
-
 <?php
-
     if(isset($_SESSION["img"])){
-
-        echo '<img src=' . $_SESSION["img"] . '>';
-
+        echo '<div id="image">';
+        echo    '<img src=' . $_SESSION["img"] . '>';
+        echo '</div>';
     }
 
+    if(isset($_SESSION["td"])){
+        echo '<table id="mot" style="margin: auto;">';
+        echo    '<tr id="mot-tr">';
+        echo           $_SESSION["td"];
+        echo    '</tr>';
+        echo '</table>';
 
+    }
 ?>
 
 <table id="clavier">
@@ -30,6 +35,8 @@
         </tr>
     </tbody>
 </table>
+
+<button onclick="initPendu()">Lancer une nouvelle partie</button>
 
 <?php
     include('view/footer.php');

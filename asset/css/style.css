@@ -9,7 +9,7 @@
 
     color: #F9F9F9;
     border: 1px solid #DDDDDD;
-    background-color: #5babf1;
+    background-color: #393939;
 }
 
 #clavier {
@@ -27,4 +27,8 @@ body{
     border: none;
     cursor: auto;
     background-color: #fff;
+}
+
+#mot{
+    margin: auto;
 }
