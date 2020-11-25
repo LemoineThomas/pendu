@@ -1,6 +1,7 @@
 <?php
+    $partie = htmlspecialchars ($_GET['partie']);
     //on lance une nouvelle partie et on initialise les variables
-    if ($_GET['partie'] == 'nouvelle') {
+    if ($partie == 'nouvelle') {
         $_SESSION["erreur"] = '0';
         $_SESSION["img"] = "asset/images/Hangman-0.png";
         $_SESSION["message"] = "";
@@ -26,11 +27,11 @@
         $_SESSION["td"] = $td;
 
     //lorsque l'utilisateur fait une proposition de lettre
-    }else if($_GET['partie'] == 'proposition'){
+    }else if($partie == 'proposition'){
         //on verifie que le get est présent
         if (isset($_GET['lettre'])) {
 
-            $lettre = $_GET['lettre'];
+            $lettre = htmlspecialchars ($_GET['lettre']);
             $mot = $_SESSION['mot'];
             $erreur = $_SESSION['erreur'];
 
@@ -85,7 +86,7 @@
 
                 //on remplace les _ par la lettre
                 for ($u=0; $u < count($indexMot); $u++) { 
-                    $motPendu[$indexMot[$u]] = $_GET['lettre'];
+                    $motPendu[$indexMot[$u]] = $lettre;
                 }
                 //si on a trouvé toutes les lettres, on affiche le message
                 if($nbLettreTrouve == strlen ($_SESSION["mot"])){
