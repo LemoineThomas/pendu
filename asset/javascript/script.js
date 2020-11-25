@@ -7,3 +7,6 @@ function p(lettre){
 }
 
 
+if (!$('#message').is(':empty')){
+    $('#clavier').html("")
+}
