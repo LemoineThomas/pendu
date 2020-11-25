@@ -1,6 +1,11 @@
 *{
     font-family: "Arial";
 }
+body{
+    text-align: center;
+    background-color: lightsteelblue !important;
+}
+
 #clavier td {
     width: 25px;
     text-align: center;
@@ -19,10 +24,6 @@
     padding: 10px;
 }
 
-body{
-    text-align: center;
-}
-
 #clavier .invisible {
     border: none;
     cursor: auto;
@@ -31,4 +32,5 @@ body{
 
 #mot{
     margin: auto;
+    font-size: 25px;
 }

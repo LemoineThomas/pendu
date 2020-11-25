@@ -1,8 +1,6 @@
 <?php
     include('view/header.php');
-?>
 
-<?php
     if(isset($_SESSION["img"])){
         echo '<div id="image">';
         echo    '<img src=' . $_SESSION["img"] . '>';
@@ -10,12 +8,17 @@
     }
 
     if(isset($_SESSION["td"])){
-        echo '<table id="mot" style="margin: auto;">';
+        echo '<table id="mot" style="margin: auto;font-size: 25px;">';
         echo    '<tr id="mot-tr">';
         echo           $_SESSION["td"];
         echo    '</tr>';
         echo '</table>';
 
+    }
+
+    if(isset($_SESSION["message"])){
+
+        echo "<div id='message'>" . $_SESSION["message"] . "</div>";
     }
 ?>
 
@@ -36,7 +39,7 @@
     </tbody>
 </table>
 
-<button onclick="initPendu()">Lancer une nouvelle partie</button>
+<button class="btn btn-secondary" onclick="initPendu()">Lancer une nouvelle partie</button>
 
 <?php
     include('view/footer.php');
