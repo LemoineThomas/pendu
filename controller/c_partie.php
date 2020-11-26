@@ -103,7 +103,11 @@
                 $_SESSION["td"] = $td;
             }
 
+        }else{
+            $view = "view/v_lancer.php";
         }
+    }else{
+        $view = "view/v_lancer.php";
     }
 
     $view = "view/v_partie.php";
